@@ -45,12 +45,12 @@ PrintBoard:
 PlayerX:
 	lb $a1, x
 	sb $a1, 7($s2)
-	sb $a1, 30($s3)
+	sb $a1, 8($s3)
 	j Play
 Player0:
 	lb $a1, o
 	sb $a1, 7($s2)
-	sb $a1, 30($s3)
+	sb $a1, 8($s3)
 
 Play:
 	li $v0, 4
@@ -276,7 +276,7 @@ invalidMove: .asciiz "**Invalid Move**"
 occupiedSpace: .asciiz "**Space already occupied**\n"
 x: .asciiz "X"
 o: .asciiz "O"
-won: .asciiz "\nPlayer  Won! \n"
+won: .asciiz "\nPlayer   Won! \n"
 tie: .asciiz  "\nTie!!!"
 gameMenu: .asciiz "\n\nChoose an option:\n[1] New Game\t[99] Quit\nOption: "
 clean: .byte ' '
